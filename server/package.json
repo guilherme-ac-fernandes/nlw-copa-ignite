@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "studio": "npx prisma studio",
-    "migration": "npx prisma migrate dev"
+    "migration": "npx prisma migrate dev",
+    "table:generate": "npx prisma generate"
   },
   "keywords": [],
   "author": "Guilherme Fernandes",
