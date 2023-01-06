@@ -1,5 +1,3 @@
-# nlw-copa-ignite
-
 # Projeto Bolão da Copa ⚽️🏆
 > Projeto da Rocketseat
 
