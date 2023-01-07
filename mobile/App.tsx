@@ -16,7 +16,7 @@ import { SignIn } from './src/screens/SignIn';
 // Style
 import { THEME } from './src/styles/theme';
 
-import { Find } from './src/screens/Find';
+import { Pools } from './src/screens/Pools';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,7 +33,7 @@ export default function App() {
           backgroundColor='transparent'
           translucent
         />
-        {fontsLoaded ? <Find /> : <Loading />}
+        {fontsLoaded ? <Pools /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );

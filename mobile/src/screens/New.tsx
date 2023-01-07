@@ -15,7 +15,7 @@ export function New() {
 
   return (
     <VStack flex={1} bg='gray.900'>
-      <Header title='Criar novo bolão' onShare={() => {}} />
+      <Header title='Criar novo bolão' />
 
       <VStack mt={8} mx={5} alignItems='center'>
         <Logo />
