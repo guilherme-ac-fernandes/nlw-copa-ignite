@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Heading, Text, VStack, useToast } from 'native-base';
+// import { useState } from 'react';
+import { Heading, VStack } from 'native-base';
 
 // Components
 import { Header } from '../components/Header';
