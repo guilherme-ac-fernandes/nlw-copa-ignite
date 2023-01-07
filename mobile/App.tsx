@@ -16,6 +16,8 @@ import { SignIn } from './src/screens/SignIn';
 // Style
 import { THEME } from './src/styles/theme';
 
+import { Find } from './src/screens/Find';
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_500Medium,
@@ -31,7 +33,7 @@ export default function App() {
           backgroundColor='transparent'
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Find /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
