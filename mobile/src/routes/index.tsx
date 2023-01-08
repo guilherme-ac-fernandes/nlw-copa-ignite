@@ -12,8 +12,7 @@ export const Routes = () => {
   return (
     <Box flex={1} bgColor='gray.900'>
       <NavigationContainer>
-        {/* {user.name ? <AppRoutes /> : <SignIn />} */}
-        <AppRoutes />
+        {user.name ? <AppRoutes /> : <SignIn />}
       </NavigationContainer>
     </Box>
   );
