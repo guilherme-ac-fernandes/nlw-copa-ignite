@@ -1,4 +1,4 @@
-# Projeto Bolão da Copa ⚽️🏆
+# Projeto Copa ⚽️🏆
 > Projeto da Rocketseat
 
 Consiste em uma aplicação web e mobile para criações de bolões da copa do mundo Catar 🇶🇦 2022.
