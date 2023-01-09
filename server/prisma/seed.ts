@@ -5,10 +5,10 @@ const prisma = new PrismaClient();
 async function main() {
   const user = await prisma.user.create({
     data: {
-      name: 'Guilherme Fernandes',
-      email: 'gfengquimica@gmail.com',
-      avatarUrl: 'https://github.com/guilherme-ac-fernandes.png',
-    },
+      name: 'Diego',
+      email: 'diego@gmail.com',
+      avatarUrl: 'https://github.com/diego3g.png',
+    }
   });
 
   const pool = await prisma.pool.create({
