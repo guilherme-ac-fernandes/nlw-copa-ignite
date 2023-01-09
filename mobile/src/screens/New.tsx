@@ -9,9 +9,50 @@ import { Button } from '../components/Button';
 // Image
 import Logo from '../assets/logo.svg';
 
+// API
+import { api } from '../services/api';
+
 export function New() {
   const [title, setTitle] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const toast = useToast();
+
+  const handlePoolCreate = async () => {
+    if (!title.trim()) {
+      return toast.show({
+        title: 'Informe um nome para o seu bolão',
+        placement: 'top',
+        bgColor: 'red.500',
+      });
+    }
+
+    try {
+      setIsLoading(true);
+
+      await api.post('/pools', { title: title.toUpperCase() });
+
+      toast.show({
+        title: 'Bolão criado com sucesso!',
+        placement: 'top',
+        bgColor: 'green.500',
+      });
+
+      setTitle('');
+
+    } catch (err) {
+      console.log(err);
+
+      toast.show({
+        title: 'Não foi possível criar o bolão',
+        placement: 'top',
+        bgColor: 'red.500',
+      });
+
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <VStack flex={1} bg='gray.900'>
@@ -27,8 +68,7 @@ export function New() {
           my={8}
           textAlign='center'
         >
-          Crie seu próprio bolão da copa{'\n'}
-          e compartilhe entre amigos!
+          Crie seu próprio bolão da copa{'\n'}e compartilhe entre amigos!
         </Heading>
 
         <Input
@@ -40,7 +80,7 @@ export function New() {
 
         <Button
           title='CRIAR MEU BOLÃO'
-          // onPress={handlePoolCreate}
+          onPress={handlePoolCreate}
           isLoading={isLoading}
         />
 
