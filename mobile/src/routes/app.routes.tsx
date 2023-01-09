@@ -6,7 +6,7 @@ import { PlusCircle, SoccerBall } from 'phosphor-react-native';
 import { New } from '../screens/New';
 import { Pools } from '../screens/Pools';
 import { Find } from '../screens/Find';
-// import { Details } from '../screens/Details';
+import { Details } from '../screens/Details';
 
 // Theme
 import { useTheme } from 'native-base';
@@ -59,11 +59,11 @@ export const AppRoutes = () => {
         options={{ tabBarButton: () => null }}
       />
 
-      {/* <Screen 
+      <Screen 
         name="details"
         component={Details}
         options={{ tabBarButton: () => null }}
-      /> */}
+      />
     </Navigator>
   );
 };

@@ -11,8 +11,8 @@ interface GuessProps {
   gameId: string;
   createdAt: string;
   participantId: string;
-  firstTeamPoints: number;
-  secondTeamPoints: number;
+  firstTeamPoints: string;
+  secondTeamPoints: string;
 }
 
 export interface GameProps {
@@ -70,6 +70,7 @@ export function Game({
           code={data.firstTeamCountryCode}
           position='right'
           onChangeText={setFirstTeamPoints}
+          value={data.guess?.firstTeamPoints}
         />
 
         <X color={colors.gray[300]} size={sizes[6]} />
@@ -78,6 +79,8 @@ export function Game({
           code={data.secondTeamCountryCode}
           position='left'
           onChangeText={setSecondTeamPoints}
+          value={data.guess?.secondTeamPoints}
+
         />
       </HStack>
 
